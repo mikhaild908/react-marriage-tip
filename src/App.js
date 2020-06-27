@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const MARRIAGE_TIP_API = 'http://clickanthem.com/rcia/api/marriagetip';
+const MARRIAGE_TIP_API = '<api endpoint here>';
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class App extends Component {
       .then(response => response.json())
       .then(result => this.setMarriageTip(result))
       .catch(error => error);
-    //this.setMarriageTip({Tip:'Christ died for us. Spouses give their lives daily for each other, and parents for their children. Your sacrifices are worthwhile!'});
+    //this.setMarriageTip({tip:'Christ died for us. Spouses give their lives daily for each other, and parents for their children. Your sacrifices are worthwhile!'});
   }
 
   render() {
@@ -39,7 +39,7 @@ class App extends Component {
           <h1 className="App-title">Marriage Tip of the Day</h1>
         </header>
         <p className="App-intro">
-          {result.Tip}
+          {result.tip}
         </p>
       </div>
     );
